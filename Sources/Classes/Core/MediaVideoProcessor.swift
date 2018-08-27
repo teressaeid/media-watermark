@@ -98,6 +98,7 @@ extension MediaProcessor {
                 elementLayer.contents = element.contentImage.cgImage
             } else if element.type == .text {
                 elementLayer = CATextLayer()
+                (elementLayer as! CATextLayer).isWrapped = true
                 (elementLayer as! CATextLayer).string = element.contentText
             }
 
